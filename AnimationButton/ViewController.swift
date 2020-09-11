@@ -10,9 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var customButton: CustomButton!
+    let tapGestureRecognizer = UITapGestureRecognizer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        customButton = CustomButton(view: self.view, backgroundColor: .blue, title: "Login")
+        customButton.buttonAction(tapGestureRecognizer: tapGestureRecognizer)
     }
 
 
